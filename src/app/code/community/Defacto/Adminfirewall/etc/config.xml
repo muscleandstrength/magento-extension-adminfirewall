@@ -12,6 +12,9 @@
                     <observer>Defacto_Adminfirewall_Model_Admin_Observer</observer>
                 </rewrite>
             </admin>
+            <defacto_adminfirewall>
+                <class>Defacto_Adminfirewall_Model</class>
+            </defacto_adminfirewall>
         </models>
         <helpers>
             <defacto_adminfirewall>

@@ -68,7 +68,8 @@ class Defacto_Adminfirewall_Helper_Data extends Mage_Core_Helper_Abstract
      **/
     public function isAccessPermitted($ip)
     {
-        return in_array($ip, $this->getAdminFirewallWhitelist(), true);
+        return Mage::getSingleton('defacto_adminfirewall/firewall', array('whitelist' => $this->getAdminFirewallWhitelist()))
+            ->allows($ip);
     }
 
     /**
